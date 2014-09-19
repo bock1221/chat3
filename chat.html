@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link href="chat.css" rel="stylesheet">
+		<script src="chat.js"></script>
+		<title>Bocks chatroom</title>
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="header ">
+				<ul class="nav nav-pills pull-right">
+					<li class="active">
+						<a href="#"id="home" >Home</a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal"> Register</a>
+
+						<div class="modal fade  bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title primary" id="myModalLabel">Registeration</h4>
+									</div>
+									<div class="modal-body">
+										<div class="input-group">
+											<span class="input-group-addon">Username</span>
+											<input type="text" class="form-control" placeholder=""id="nameField">
+										</div></br>
+										<div class="input-group">
+											<span class="input-group-addon">email</span>
+											<input type="text" class="form-control" placeholder="">
+										</div>
+
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal" id="nameButton">
+											Submit
+										</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+					
+				</ul>
+				<h3 class="text-muted">Bocks chat room</h3>
+			</div >
+
+			<div id ="chatPage">
+				<div class="jumbotron" >
+					Start typing
+					<br>
+					<textarea id="textInput"></textarea>
+					<button type="button" class="sendButton btn btn-success btn-xs">
+						<span class="glyphicon glyphicon-ok-circle"class="sendButton"></span> Send
+					</button>
+					<br>
+					<div id="textArea1"></div>
+
+				</div>
+
+				<div class="row marketing">
+					<div class="col-lg-6">
+						<h4>Subheading</h4>
+						<p>
+							Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+						</p>
+
+						<h4>Subheading</h4>
+						<p>
+							Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+						</p>
+
+						<h4>Subheading</h4>
+						<p>
+							Maecenas sed diam eget risus varius blandit sit amet non magna.
+						</p>
+					</div>
+
+					<div class="col-lg-6">
+						<h4>Subheading</h4>
+						<p>
+							Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+						</p>
+
+						<h4>Subheading</h4>
+						<p>
+							Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+						</p>
+
+						<h4>Subheading</h4>
+						<p>
+							Maecenas sed diam eget risus varius blandit sit amet non magna.
+						</p>
+
+					</div>
+				</div>
+			</div>
+			<div id="welcomePicture">
+				<h1>Welcome to Bocks chatrooms</h1>
+				<img src ="pool_couch.jpg" height="300" width="510" />
+				<h3>Kick back and relax wherever you find yourself </h3>
+			</div>
+			<div id="dbTag">
+				Powered by
+				<br>
+				<span id="logo">CouchDB</span>
+			</div>
+			<div class="btn-group">
+				<button id="pickRoom" type="button" class="btn btn-primary btn-lg dropdown-toggle roomButton" data-toggle="dropdown">
+					pick a
+					<br>
+					chatroom&nbsp<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" id="roomMenu" role="menu">
+					<li>
+						<a href="#">Action</a>
+					</li>
+			</div>
+			<div class="btn-group ">
+				<button id="createRoom" type="button" class="btn btn-primary btn-lg dropdown-toggle roomButton" data-toggle="modal" data-target="#roomModal">
+					create a
+					<br>
+					chatroom&nbsp<span class="caret"></span>
+				</button>
+				<div class="modal fade  bs-example-modal-sm" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+									&times;
+								</button>
+								<h4 class="modal-title primary" id="myModalLabel">Create a room</h4>
+							</div>
+							<div class="modal-body">
+								<div class="input-group">
+									<span class="input-group-addon">Room name</span>
+									<input type="text" id="roomInput" class="form-control" placeholder="">
+								</div>
+								</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal" id="roomSubmit">
+									Submit
+								</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--<div class="footer">
+
+			</div>-->
+		</div>
+
+		<!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+	</body>
+</html>

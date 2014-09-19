@@ -1,0 +1,143 @@
+/* Space out content a bit */
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header, .marketing, .footer {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+	border-bottom: 2px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+	padding-bottom: 19px;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+	padding-top: 19px;
+	color: #777;
+	border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+	.container {
+		max-width: 730px;
+	}
+}
+.container-narrow > hr {
+	margin: 30px 0;
+}
+
+.jumbotron .btn {
+	margin-left: 300px;
+	margin-bottom: 5px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+	text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+	height: 600px;
+	width: 500px;
+	margin-left: 100px;
+	padding-top: 24px;
+	border: solid;
+}
+
+#textArea1 {
+	background-color: white;
+	height: 75%;
+	width: 100%;
+	border: double;
+	overflow: auto;
+}
+#textInput {
+	width: 100%;
+}
+#nameInput {
+	margin-bottom: 5px;
+}
+#chatPage {
+	display: none;
+}
+#welcomePicture {
+	margin-left: 20px;
+	float: left
+}
+
+#pickRoom {
+	
+	margin-top: 47px;
+	margin-left: 20px;
+}
+#createRoom{
+	margin-top: 50px;
+	margin-left: 20px;
+}
+.roomButton{
+
+	font-size:15px;
+}
+#nameInput{
+	margin-left: 163px;
+}
+#myModalLabel{
+	
+	text-align:center;
+}
+#dbTag{
+	position: relative;
+display: inline-block;
+vertical-align: middle;
+margin-top: 28px;
+border:2px;
+margin-left: 18px;
+
+}
+#logo{
+	color: red;
+	border:solid;
+	padding: 2px;
+	margin-top: 2px;
+}
+.roomBDiv{
+	font-size: 25px;
+	color: #008000;
+}
+/* Supporting marketing content */
+.marketing {
+	margin: 40px 0;
+}
+.marketing p + h4 {
+	margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+	/* Remove the padding we set earlier */
+	.header, .marketing, .footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	/* Space out the masthead */
+	.header {
+		margin-bottom: 30px;
+	}
+	/* Remove the bottom border on the jumbotron for visual effect */
+	.jumbotron {
+
+	}
+}
+
+
